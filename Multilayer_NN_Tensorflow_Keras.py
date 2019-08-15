@@ -94,5 +94,7 @@ correct_preds = np.sum(y_test == y_test_pred, axis=0)
 test_acc = correct_preds / y_test.shape[0]
 print('Test accuracy: %.2f%%' % (test_acc * 100))
 
+#Generalization on a single Sample 
+print (np.argmax(model.predict(X_test_norm[0].reshape((1,-1)))))
 
 
